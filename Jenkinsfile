@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh "pwd"
                 sh "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
-		sh "docker run -it -p 8090:8090 -d tomcatsamplewebapp:${env.BUILD_ID}"
+		sh "docker run -it -p 8090:8080 -d tomcatsamplewebapp:${env.BUILD_ID}"
             }
         }
 
